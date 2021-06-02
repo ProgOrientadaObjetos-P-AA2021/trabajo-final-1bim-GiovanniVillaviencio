@@ -1,14 +1,37 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package paquetetres;
 
-/**
- *
- * @author reroes
- */
-public class Ubicacion {
-    
+import java.io.Serializable;
+
+public class Ubicacion implements Serializable {
+    private String nombreBarrio;
+    private String referencia;
+    private int numCasa;
+    public Ubicacion(String n, String r, int nc) {
+        nombreBarrio = n;
+        referencia = r;
+        numCasa = nc;    
+    }
+
+    public void establecerNombreBarrio(String n) {
+        nombreBarrio = n;
+    }
+
+    public void establecerReferencia(String r) {
+        referencia = r;
+    }
+    public void establecerNumCasa(int nc){
+        numCasa = nc;
+    }
+
+    public String obtenerNombreBarrio() {
+        return nombreBarrio;
+    }
+
+    public String obtenerReferencia() {
+        return referencia;
+    }
+    public int obtenerNumCasa(){
+        return numCasa;
+    }
 }

@@ -1,14 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package paquetecinco;
 
-/**
- *
- * @author reroes
- */
-public class Constructora {
-    
+import java.io.Serializable;
+
+public class Constructora implements Serializable {
+    private String nConstructora;
+    private String idC;
+
+    public Constructora(String nC, String id) {
+        nConstructora = nC;
+        idC = id;
+    }
+
+    public void establecerNConstructora(String nC) {
+        nConstructora = nC;
+    }
+
+    public void establecerIDC(String id) {
+        idC = id;
+    }
+
+    public String obtenerNConstructora() {
+        return nConstructora;
+    }
+
+    public String obtenerIDC() {
+        return idC;
+    }
 }
